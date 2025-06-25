@@ -1,5 +1,6 @@
 # Pandorabox Blog
 
-This repository contains a responsive blog template styled with Tailwind CSS.
-Open `index.html` in your browser to view the sample layout.
-This repository contains a simple static template for a personal blog. Open `index.html` in a browser to see the example layout.
+This repository contains a simple blog template styled with Tailwind CSS.
+
+A minimal authentication example is included.
+Open `login.html` and sign in with **user/password** to access the main blog (`index.html`).

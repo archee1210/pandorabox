@@ -6,12 +6,24 @@
     <title>Pandorabox Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <script>
+        if(localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'login.html';
+        }
+    </script>
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-white shadow">
-        <div class="container mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold text-center">Pandorabox Blog</h1>
-            <p class="text-center text-gray-600">Welcome to my personal blog.</p>
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold">Pandorabox Blog</h1>
+                <p class="text-gray-600">Welcome to my personal blog.</p>
+            </div>
+            <button onclick="logout()" class="text-sm text-blue-500">Logout</button>
         </div>
     </header>
     <main class="container mx-auto px-4 py-8 space-y-8">
@@ -28,28 +40,6 @@
     </main>
     <footer class="text-center text-sm text-gray-600 py-6">
         &copy; 2023 My Blog
-    <title>My Blog</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>My Blog</h1>
-        <p>Welcome to my personal blog.</p>
-    </header>
-    <main>
-        <article>
-            <h2>First Post</h2>
-            <p class="date">January 1, 2023</p>
-            <p>This is a sample blog post. Replace this text with your own content.</p>
-        </article>
-        <article>
-            <h2>Another Post</h2>
-            <p class="date">February 1, 2023</p>
-            <p>More sample content goes here.</p>
-        </article>
-    </main>
-    <footer>
-        <p>&copy; 2023 My Blog</p>
     </footer>
 </body>
 </html>
