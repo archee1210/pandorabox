@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pandorabox Blog</title>
+    <title>작품 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <script>
@@ -13,6 +13,9 @@
         function logout() {
             localStorage.removeItem('loggedIn');
             window.location.href = 'login.html';
+        }
+        function buy() {
+            alert('구매가 완료되었습니다!');
         }
     </script>
 </head>
@@ -31,17 +34,13 @@
             </nav>
         </div>
     </header>
-    <main class="container mx-auto px-4 py-8 space-y-8">
-        <article class="bg-white rounded shadow p-6">
-            <h2 class="text-2xl font-semibold mb-2">First Post</h2>
-            <p class="text-sm text-gray-500">January 1, 2023</p>
-            <p class="mt-4">This is a sample blog post. Replace this text with your own content.</p>
-        </article>
-        <article class="bg-white rounded shadow p-6">
-            <h2 class="text-2xl font-semibold mb-2">Another Post</h2>
-            <p class="text-sm text-gray-500">February 1, 2023</p>
-            <p class="mt-4">More sample content goes here.</p>
-        </article>
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded shadow p-6">
+            <img src="https://source.unsplash.com/featured/600x402?illustration" alt="작품3" class="mx-auto mb-4">
+            <h2 class="text-2xl font-semibold mb-2">작품 3</h2>
+            <p class="mb-4">작품 3의 상세 설명입니다. 실험적인 스타일과 창의적인 요소가 돋보입니다.</p>
+            <button onclick="buy()" class="bg-blue-500 text-white px-4 py-2 rounded">구매하기</button>
+        </div>
     </main>
     <footer class="text-center text-sm text-gray-600 py-6">
         &copy; 2023 My Blog

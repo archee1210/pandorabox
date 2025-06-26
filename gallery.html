@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pandorabox Blog</title>
+    <title>작품 갤러리</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <script>
@@ -31,17 +31,25 @@
             </nav>
         </div>
     </header>
-    <main class="container mx-auto px-4 py-8 space-y-8">
-        <article class="bg-white rounded shadow p-6">
-            <h2 class="text-2xl font-semibold mb-2">First Post</h2>
-            <p class="text-sm text-gray-500">January 1, 2023</p>
-            <p class="mt-4">This is a sample blog post. Replace this text with your own content.</p>
-        </article>
-        <article class="bg-white rounded shadow p-6">
-            <h2 class="text-2xl font-semibold mb-2">Another Post</h2>
-            <p class="text-sm text-gray-500">February 1, 2023</p>
-            <p class="mt-4">More sample content goes here.</p>
-        </article>
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-semibold mb-6">작품 갤러리</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded shadow p-4 text-center">
+                <img src="https://source.unsplash.com/featured/300x200?art" alt="작품1" class="mx-auto mb-2">
+                <h3 class="font-semibold">작품 1</h3>
+                <a href="art1.html" class="text-blue-500 underline">상세 보기</a>
+            </div>
+            <div class="bg-white rounded shadow p-4 text-center">
+                <img src="https://source.unsplash.com/featured/300x201?painting" alt="작품2" class="mx-auto mb-2">
+                <h3 class="font-semibold">작품 2</h3>
+                <a href="art2.html" class="text-blue-500 underline">상세 보기</a>
+            </div>
+            <div class="bg-white rounded shadow p-4 text-center">
+                <img src="https://source.unsplash.com/featured/300x202?illustration" alt="작품3" class="mx-auto mb-2">
+                <h3 class="font-semibold">작품 3</h3>
+                <a href="art3.html" class="text-blue-500 underline">상세 보기</a>
+            </div>
+        </div>
     </main>
     <footer class="text-center text-sm text-gray-600 py-6">
         &copy; 2023 My Blog
