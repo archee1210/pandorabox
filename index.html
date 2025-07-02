@@ -7,13 +7,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <script>
-        if(localStorage.getItem('loggedIn') !== 'true') {
-            window.location.href = 'login.html';
+        function applyTheme() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.body.classList.add('dark');
+            } else {
+                document.body.classList.remove('dark');
+            }
         }
-        function logout() {
-            localStorage.removeItem('loggedIn');
-            window.location.href = 'login.html';
+
+        function toggleTheme() {
+            if (document.body.classList.contains('dark')) {
+                document.body.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
         }
+
+        function setupAuthLink() {
+            const link = document.getElementById('authLink');
+            const loggedIn = localStorage.getItem('loggedIn') === 'true';
+            if (loggedIn) {
+                link.textContent = 'Logout';
+                link.href = '#';
+                link.onclick = function() {
+                    localStorage.removeItem('loggedIn');
+                    window.location.href = 'login.html';
+                };
+            } else {
+                link.textContent = 'Login';
+                link.href = 'login.html';
+                link.onclick = null;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            applyTheme();
+            setupAuthLink();
+            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+        });
     </script>
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -27,7 +61,8 @@
                 <a href="index.html" class="text-sm text-blue-500">Home</a>
                 <a href="about.html" class="text-sm text-blue-500">나의 소개</a>
                 <a href="gallery.html" class="text-sm text-blue-500">작품 갤러리</a>
-                <button onclick="logout()" class="text-sm text-blue-500">Logout</button>
+                <a id="authLink" href="#" class="text-sm text-blue-500"></a>
+                <button id="themeToggle" class="text-sm text-blue-500">Toggle Theme</button>
             </nav>
         </div>
     </header>

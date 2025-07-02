@@ -1,16 +1,30 @@
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+    --bg-color: #1a202c;
+    --text-color: #f9f9f9;
+    --card-bg: #2d3748;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f9f9f9;
-    color: #333;
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
 }
 
 header {
-    background: #fff;
+    background: var(--card-bg) !important;
     padding: 2rem 1rem;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 main {
@@ -20,11 +34,11 @@ main {
 }
 
 article {
-    background: #fff;
+    background: var(--card-bg) !important;
     padding: 1rem 2rem;
     margin-bottom: 2rem;
     border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px var(--shadow-color);
 }
 
 article h2 {
@@ -39,6 +53,6 @@ article .date {
 footer {
     text-align: center;
     padding: 2rem 0;
-    background: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--card-bg) !important;
+    box-shadow: 0 -2px 4px var(--shadow-color);
 }
